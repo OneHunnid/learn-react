@@ -160,6 +160,7 @@ Foo.propTypes = {
   seats:      React.PropTypes.number,
   settings:   React.PropTypes.object,
   callback:   React.PropTypes.func
+}
 ```
 
 **Render Return**
