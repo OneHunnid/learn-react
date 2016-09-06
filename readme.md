@@ -115,7 +115,7 @@ Add some basic linting to your project by including the following snippets in yo
   },
   "devDependencies": {
     "babel-core": "6.14.0", // or latest version
-    "babel-preset-react": v6.11.1" // or latest version
+    "babel-preset-react": "6.11.1" // or latest version
   }
 }
 ```
