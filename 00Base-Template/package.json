@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack-dashboard -- node server.js",
-    "test:lint": "eslint *.js"
+    "test:lint": "eslint **/*.js"
   },
   "author": "Chris Limbrick",
   "license": "ISC",
