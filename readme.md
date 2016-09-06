@@ -1,11 +1,41 @@
-## Learn React
+# Learn React
 
 While we explore the React library, this repository will act as a React style guide containing best practices and examples.
 
 ## Best Practices
 **Utilize ES6**
 
-...
+When building a React application, it's recommended to use ES6. ECMAScript 2015 provides developers with many advancements such as classes, spread operator, for-of loop, arrow functions, etc.
+
+**Component Hierarchy**
+
+```
+export default class Foo extends React.Component {
+  constructor(props) {
+    super(props)
+    this.__myCustomMethodTwo = this.__myCustomMethodTwo.bind(this)
+    this.__myCustomMethodTwo = this.__myCustomMethodTwo.bind(this)
+  }
+  componentWillMount() {}
+  componentDidMount() {}
+
+  componentWillReceiveProps() {}
+  shouldComponentUpdate() {}
+  componentWillUpdate() {}
+  componentDidUpdate() {}
+
+  componentWillUnmount() {}
+
+  __myCustomMethodOne() {}
+  __myCustomMethodTwo() {}
+
+  render() {
+    return (
+      <div></div>
+    )
+  }
+}
+```
 
 **Opt for stateless components**
 
@@ -13,7 +43,7 @@ While we explore the React library, this repository will act as a React style gu
 
 **Utilize class extensions**
 
-...
+JavaScript Classes provide a much simpler and clearer syntax to create objects and deal with inheritance. React Components should be created using Classes.
 
 **Default eslint config**
 
@@ -23,37 +53,70 @@ While we explore the React library, this repository will act as a React style gu
 
 ...
 
+**Prefix event handlers**
+
+Prefix all event handlers with two underscores followed by the word "handle".
+```
+__handleOnClick {}
+```
+
 **Bind handler methods in the component's constructor**
 
-...
+When using Classes with React Components, there's no autobinding. You should bind your event handlers in the constructor so they are only bound once for every instance.
+```
+constructor(props) {
+  super(props)
+  this.__handleOnClick = this.__handleOnClick.bind(this)
+}
+```
 
-**Separate basic components from routes components from container components**
-- Routes (pages)
-- Components (pieces of functionality)
-- Containers (layout/templates)
+**Separate Components**
+To better understand the functionality of components, it's recommended to separate basic components from routes and components from container components.
+```
+Routes          # Pages
+Components      # Piece of Functionality
+Containers      # Layout/Templates
+
+```
 
 **Fix React warnings, do not ignore them**
 
-...
+React warners should never go unnoticed. If there is an issue, fix it immediately.
 
 **Always declare your propTypes**
 
-Always Document what props your component expects and what they do. This will specify a validation function for each prop it is set to receive. If validation function fails, a warning will be logged in the console.
+Always declare what props your component expects and what they do. This will specify a validation function for each prop it's set to receive. If validation function fails, a warning will be logged in the console.
+```
+Foo.propTypes = {
+  text:       PropTypes.string,
+  completed:  Proptypes.bool
+  seats:      React.PropTypes.number,
+  settings:   React.PropTypes.object,
+  callback:   React.PropTypes.func
+```
 
 **Render Return**
 
 If the element will fit on one 80 character line, then inline it.
+```
+render() {
+  return (
+    <div>This element fits on one 80 character line. This can be inlined.</div>
+  )
+}
+```
 
 **JSX Quote Formatting**
 
 Always use double quotes for JSX string properties. Otherwise, use single quotes.
-
-**Prefix event handles**
-
-Prefix all event handles with the word 'handle' and use two underscores.
 ```
-__handleOnClick{}
+render() {
+  return(
+      <button className="title" onClick="this.__handleOnClick">Click Me</button>
+  )
+}
 ```
+
 
 ## Primary Dependencies
 ```
