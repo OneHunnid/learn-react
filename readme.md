@@ -45,13 +45,80 @@ export default class Foo extends React.Component {
 
 JavaScript Classes provide a much simpler and clearer syntax to create objects and deal with inheritance. React Components should be created using Classes.
 
+**Default NPM config**
+
+Add the following to a `.npmrc` file in your project root. This will automatically save (and remove) dependencies installed with `npm i` or `npm i -D`.
+
+```
+save=true
+save-exact=true
+```
+
 **Default eslint config**
 
-...
+Add some basic linting to your project by including the following snippets in your `package.json` file.
+
+> **Note:** Be sure to update the `devDependencies` section with appropriate versions.
+
+```js
+{
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single",
+        {
+          "allowTemplateLiterals": true
+        }
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "devDependencies": {
+    "eslint": "3.0.0"
+  },
+  "scripts": {
+    "test:lint": "eslint *.js"
+  }
+}
+```
 
 **Default babel config**
 
-...
+> **Note:** Be sure to update the `devDependencies` section with appropriate versions.
+
+```js
+{
+  "babel": {
+    "presets": [
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "6.14.0", // or latest version
+    "babel-preset-react": "6.11.1" // or latest version
+  }
+}
+```
 
 **Prefix event handlers**
 
