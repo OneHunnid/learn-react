@@ -123,5 +123,5 @@ render() {
 React           # Application library
 React-Router    # Create and manage routes for application
 Redux           # Manage application state and data
-Webpack         # asdf
+Webpack         # A modular JavaScript bundler
 ```
