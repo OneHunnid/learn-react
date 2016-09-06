@@ -1,13 +1,45 @@
 {
-  "name": "Base Template",
+  "name": "Base",
   "version": "1.0.0",
   "description": "React, Redux, Sass and Webpack Starter Kit",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack-dashboard -- node server.js"
+    "dev": "webpack-dashboard -- node server.js",
+    "test:lint": "eslint *.js"
   },
   "author": "Chris Limbrick",
   "license": "ISC",
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single",
+        {
+          "allowTemplateLiterals": true
+        }
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.11.4",
@@ -20,6 +52,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
+    "eslint": "^3.4.0",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.8.0",
