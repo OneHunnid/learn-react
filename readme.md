@@ -97,7 +97,7 @@ Add some basic linting to your project by including the following snippets in yo
     "eslint": "3.0.0"
   },
   "scripts": {
-    "test:lint": "eslint *.js"
+    "test:lint": "eslint **/*.js"
   }
 }
 ```
