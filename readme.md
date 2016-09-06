@@ -117,8 +117,33 @@ render() {
 }
 ```
 
+## Directory Layout
+
+To make our apps easy to understand and help keep them organized, this structure should be used:
+
+```
+├── /src/                         # The source code of the application
+    ├── /scripts/                 # Contains javascript files for app
+        ├── /actions/             # Payloads of data that send data to the store
+        ├── /components/          # Components meant for Pieces of Functionality
+        ├── /containers/          # Components meant for Layouts/Templates
+        ├── /reducers/            # Pure function that returns the next state based off of actions
+        ├── /routes/              # Components meant for Pages
+        ├── /store/               # Manages the application state
+        ├── index.js              # App entry point. Connects store to App and contains routes
+    └── /styles/                  # Contains the LESS and CSS for the app
+        ├── base.scss             # Basic styling for application
+        ├── index.scss            # Entry point for styling
+        ├── reset.css             # Standard normalize/reset stylesheet
+├── index.html                    # Application's HTML Entry Point
+│── package.json                  # NPM Packages
+│── readme.md                     # Important Information
+│── server.js                     # Development server configuration
+└── webpack.config.js             # Webpack configuration
+```
 
 ## Primary Dependencies
+A list of dependencies we use:
 ```
 React           # Application library
 React-Router    # Create and manage routes for application
