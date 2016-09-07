@@ -253,17 +253,17 @@ To make our apps easy to understand and help keep them organized, this structure
 │       └── index.js              # Exports happen here
 ├── /test/                        # The source code of the application
 │   ├── /client/                  # Client side test files
-│   │   ├── /function/            #
-│   │   ├── /unit/                #
-│   │   ├── /utils/               #
-│   │   ├── env.js                #
-│   │   └── setup.js              #
+│   │   ├── /function/            # Test functionality across components
+│   │   ├── /unit/                # Test small, critical pieces of functionality
+│   │   ├── /utils/               # Utilities used to prepare test cases
+│   │   ├── env.js                # Setup the test application environment
+│   │   └── setup.js              # Global test setup goes here
 │   └── /server/                  # Server side test files
-│       ├── /function/            #
-│       ├── /unit/                #
-│       ├── /utils/               #
-│       ├── env.js                #
-│       └── setup.js              #
+│       ├── /function/            # Test functionality across components
+│       ├── /unit/                # Test small, critical pieces of functionality
+│       ├── /utils/               # Utilities used to prepare test cases
+│       ├── env.js                # Setup the test application environment
+│       └── setup.js              # Global test setup goes here
 ├── .gitignore                    # Ignore certain files and folders
 ├── .npmrc                        # Default NPM config
 ├── index.html                    # Application's HTML Entry Point
