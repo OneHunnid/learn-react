@@ -228,26 +228,48 @@ To make our apps easy to understand and help keep them organized, this structure
 ```
 ├── /node_modules/                # 3rd-party libraries and utilities
 ├── /src/                         # The source code of the application
-│   ├── /scripts/                 # Contains javascript files for app
-│   │   ├── /actions/             # Payloads of data that send data to the store
+│   ├── /client/                  # Client side files
 │   │   ├── /assets/              # All assets files
-│   │   ├── /components/          # Components meant for Pieces of Functionality
-│   │   ├── /containers/          # Components meant for Layouts/Templates
-│   │   ├── /reducers/            # Pure function that returns the next state based off of actions
-│   │   ├── /routes/              # Components meant for Pages
-│   │   ├── /store/               # Manages the application state
-│   │   ├── /utilities/           # Utilities such as libraries or common tools
-│   │   ├── index.js              # App entry point. Connects store to App and contains routes
-│   └── /styles/                  # Contains the LESS and CSS for the app
-│       ├── base.scss             # Basic styling for application
-│       ├── index.scss            # Entry point for styling
-│       ├── reset.css             # Standard normalize/reset stylesheet
-│── .gitignore                    # Ignore certain files and folders
-│── .npmrc                        # Default NPM config
+│   │   ├── /scripts/             # Contains javascript files for app
+│   │   │   ├── /actions/         # Payloads of data that send data to the store
+│   │   │   ├── /components/      # Components meant for Pieces of Functionality
+│   │   │   ├── /containers/      # Components meant for Layouts/Templates
+│   │   │   ├── /reducers/        # Pure function that returns the next state based off of actions
+│   │   │   ├── /routes/          # Components meant for Pages
+│   │   │   ├── /store/           # Manages the application state
+│   │   │   ├── /utilities/       # Utilities such as libraries or common tools
+│   │   │   └── index.js          # App entry point. Connects store to App and contains routes
+│   │   └── /styles/              # Contains the LESS and CSS for the app
+│   │       ├── base.scss         # Basic styling for application
+│   │       ├── index.scss        # Entry point for styling
+│   │       └── reset.css         # Standard normalize/reset stylesheet
+│   └── /server/                  # Server side files
+│       ├── /middleware/          # Additional server functionality
+│       ├── /models/              # Application Models (i.e. business logic)
+│       ├── /routes/              # Controller map to routes (i.e. urls)
+│       ├── /scripts/             # Various entry points
+│       ├── /views/               # Template files
+│       ├── app.js                # Express application server
+│       └── index.js              # Exports happen here
+├── /test/                        # The source code of the application
+│   ├── /client/                  # Client side test files
+│   │   ├── /function/            #
+│   │   ├── /unit/                #
+│   │   ├── /utils/               #
+│   │   ├── env.js                #
+│   │   └── setup.js              #
+│   └── /server/                  # Server side test files
+│       ├── /function/            #
+│       ├── /unit/                #
+│       ├── /utils/               #
+│       ├── env.js                #
+│       └── setup.js              #
+├── .gitignore                    # Ignore certain files and folders
+├── .npmrc                        # Default NPM config
 ├── index.html                    # Application's HTML Entry Point
-│── package.json                  # NPM Packages
-│── readme.md                     # Important Information
-│── server.js                     # Development server configuration
+├── package.json                  # NPM Packages
+├── readme.md                     # Important Information
+├── server.js                     # Development server configuration
 └── webpack.config.js             # Webpack configuration
 ```
 
@@ -258,8 +280,6 @@ React               # Application library
 React-Router        # Create and manage routes for application
 Redux               # Manage application state and data
 Webpack             # A modular JavaScript bundler
-Webpack-dev-server  # Development server
-Webpack-dashboard   # CLI dashboard for webpack dev server
 Babel               # JavaScript compiler
 Node-sass           # Sass for styling
 Eslint              # JavaScript linter
