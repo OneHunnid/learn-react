@@ -143,7 +143,6 @@ To better understand the functionality of components, it's recommended to separa
 Routes          # Pages
 Components      # Piece of Functionality
 Containers      # Layout/Templates
-
 ```
 
 **Fix React warnings, do not ignore them**
@@ -206,6 +205,8 @@ To make our apps easy to understand and help keep them organized, this structure
 │       ├── base.scss             # Basic styling for application
 │       ├── index.scss            # Entry point for styling
 │       ├── reset.css             # Standard normalize/reset stylesheet
+│── .gitignore                    # Ignore certain files and folders
+│── .npmrc                        # Default NPM config
 ├── index.html                    # Application's HTML Entry Point
 │── package.json                  # NPM Packages
 │── readme.md                     # Important Information
