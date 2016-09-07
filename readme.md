@@ -184,6 +184,43 @@ render() {
 }
 ```
 
+**Connect Redux Store to Containers Using Connect()**
+
+When connecting your Container components to the store, use connect() from react-redux and set up mapStateToProps and mapDispatchToProps.
+
+```
+import React from 'react'
+import { connect } 'react-redux'
+
+class Foo extends React.component {
+  constructor(super) {
+    props(super)    
+  }
+  render() {
+    return (<div>Hello World</div>)
+  }
+}
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+
+  }
+}
+
+const mapDispatchToProps = (state) => {
+  return {
+
+  }
+}
+
+const Foo = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Foo)
+
+export default Foo
+```
+
 ## Directory Layout
 
 To make our apps easy to understand and help keep them organized, this structure should be used:
