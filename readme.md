@@ -39,7 +39,7 @@ export default class Foo extends React.Component {
 
 **Opt for stateless components**
 
-...
+Components shouldn't have too much state. State makes components difficult to test and reason about.
 
 **Utilize class extensions**
 
@@ -214,10 +214,15 @@ To make our apps easy to understand and help keep them organized, this structure
 ```
 
 ## Primary Dependencies
-A list of dependencies we use:
+A list of primary dependencies we use:
 ```
-React           # Application library
-React-Router    # Create and manage routes for application
-Redux           # Manage application state and data
-Webpack         # A modular JavaScript bundler
+React               # Application library
+React-Router        # Create and manage routes for application
+Redux               # Manage application state and data
+Webpack             # A modular JavaScript bundler
+Webpack-dev-server  # Development server
+Webpack-dashboard   # CLI dashboard for webpack dev server
+Babel               # JavaScript compiler
+Node-sass           # Sass for styling
+Eslint              # JavaScript linter
 ```
