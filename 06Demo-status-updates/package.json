@@ -4,8 +4,7 @@
   "description": "React, Redux, Sass and Webpack Starter Kit",
   "main": "webpack.config.js",
   "scripts": {
-    "client:serv": "webpack-dashboard -- webpack-dev-server",
-    "serve:dev": "node node_modules/.bin/nodemon --exec 'node -r dotenv/config -r babel-core/register' src/server/scripts/server --watch src/server",
+    "dev": "webpack-dashboard -- node server.js",
     "test:lint": "eslint **/*.js"
   },
   "author": "Chris Limbrick",
@@ -41,9 +40,6 @@
       ]
     }
   },
-  "babel": {
-    "presets": ["es2015"]
-  },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.11.4",
@@ -56,7 +52,6 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
-    "dotenv": "2.0.0",
     "eslint": "^3.4.0",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",

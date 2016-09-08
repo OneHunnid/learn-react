@@ -1,0 +1,134 @@
+.container {
+  max-width: 100%;
+  width: 80vw;
+  padding: 32px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-6 {
+  display: inline-block;
+  width: 48%;
+}
+
+.status {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px #f1f1f1;
+  box-sizing: border-box;
+  margin-bottom: 36px;
+  padding: 24px;
+  position: relative;
+
+  &-delete {
+    cursor: pointer;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: #eee;
+    border-radius: 100%;
+    padding: 8px;
+    box-shadow: 0px 1px 2px #c3c3c3;
+    width: 6px;
+    height: 6px;
+  }
+
+  &-delete-wrapper {
+    top: 2px;
+    position: absolute;
+    transform: Rotate(50deg);
+    left: 8px;
+  }
+
+  &-delete-lines-h {
+    display: inline-block;
+    height: 9px;
+    background-color: black;
+    width: 2px;
+    transform: rotateZ(90deg) translateY(-2px);
+  }
+
+  &-delete-lines-v {
+    display: inline-block;
+    height: 9px;
+    background-color: black;
+    width: 2px;
+  }
+
+  &-name {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  &-message {
+    line-height: 1.4;
+    font-size: 16px;
+  }
+}
+
+.status-box-container {
+  border-radius: 4px;
+  border: 1px solid #eee;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.status-box-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.status-form {
+
+  &-name {
+    display: block;
+    width: 100%;
+    border: 1px solid #eee;
+    margin-bottom: 12px;
+    min-height: 28px;
+    border-radius: 4px;
+    padding: 12px;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-message {
+    display: block;
+    width: 100%;
+    border: 1px solid #eee;
+    margin-bottom: 12px;
+    min-height: 92px;
+    border-radius: 4px;
+    padding: 12px;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-submit {
+    cursor: pointer;
+    padding: 8px 24px;
+    background-color: #254fea;
+    border: 1px solid #1b3182;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #FFF;
+    letter-spacing: 0.04em;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
