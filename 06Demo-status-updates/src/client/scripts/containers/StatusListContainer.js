@@ -16,7 +16,6 @@ export default class StatusListContainer extends React.Component {
     super(props)
   }
   render() {
-    console.log(this.props.data)
     return (
       <StatusList status={this.props}/>
     )
