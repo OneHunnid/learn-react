@@ -5,8 +5,11 @@ import { submitStatusUpdate } from './../actions/submitStatusUpdate'
 class StatusBox extends React.Component {
   constructor(props) {
     super(props)
+    // Bind our custom methods in the constructor
     this.__handleFormSubmit = this.__handleFormSubmit.bind(this);
   }
+  // This custom method allows us to pass in data from our form, and dispatch
+  // it using the submitStatusUpdate Action.
   __handleFormSubmit(e) {
     e.preventDefault();
 
@@ -18,6 +21,7 @@ class StatusBox extends React.Component {
 
     this.props.dispatch(submitStatusUpdate(nameVal, messageVal, time))
 
+    // Reset the form fields after dispatch 
     form.reset();
   }
   render() {

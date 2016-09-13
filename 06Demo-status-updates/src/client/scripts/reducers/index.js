@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux'
 
-// We are taking the action and returning the new state for UPDATE_STATUS
+// We're returning new state based upon the action
 const Status = (state={}, action) => {
   switch (action.type) {
     case 'UPDATE_STATUS':
       return {
-        ... state,
+        ...state,
         id: action.id,
         name: action.name,
         status: action.status,
@@ -14,7 +14,7 @@ const Status = (state={}, action) => {
       }
     case 'DELETE_STATUS':
       return {
-        ... state,
+        ...state,
         id: action.id
       }
     default:
@@ -22,12 +22,11 @@ const Status = (state={}, action) => {
   }
 }
 
-// We are updating "status" variable with an array state that contains
-// all statuses and actions
+// We are updating "Status" variable with an array state that contains
+// all statuses and actions.
+// Our goal is to take action.id and search through array.
+// If an item has a matching id, then delete that item
 const Statuses = (state = {}, action) => {
-
-  // take action.id and search through array. If an item has a matching id, then
-  // delete that item
 
   switch(action.type) {
     case 'UPDATE_STATUS':
@@ -44,12 +43,14 @@ const Statuses = (state = {}, action) => {
       const index = state.findIndex( ({id}) => id == action.id )
 
       // ES5 EXAMPLE
-      // const foo = state.findIndex( function({id}}, index, state) {
+      // const index = state.findIndex( function({id}}, index, state) {
       //   return element.id == action.id;
       // })
 
 
-      // If index is true, then remove the status from array
+      // If index is true, then remove the status from array using Splice.
+      // Splice is an array method that changes the content of an array by
+      // removing or existing elements and/or adding new elements.
       if (index > -1) {
         state.splice(index, 1)
       }
