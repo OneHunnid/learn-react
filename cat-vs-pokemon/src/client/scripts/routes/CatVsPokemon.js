@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import { clearContenders } from '../actions/clearContenders'
 import { fetchCat } from '../actions/fetchCat'
 import { fetchPokemon } from '../actions/fetchPokemon'
-import Cat from '../components/Cat'
-import Pokemon from '../components/Pokemon'
+import Contender from '../components/Contender'
 import './CatVsPokemon.scss'
 
 /**
@@ -111,11 +110,11 @@ export default class CatVsPokemon extends React.Component {
         </button>
         <div class="cat-vs-pokemon__contenders">
           <section className="cat-vs-pokemon__contenders__cat">
-            <Cat cat={this.props.cat} />
+            <Contender corner="blue" {...this.props.cat} />
           </section>
           <p className="cat-vs-pokemon__contenders__vs">vs.</p>
           <section className="cat-vs-pokemon__contenders__pokemon">
-            <Pokemon pokemon={this.props.pokemon} />
+            <Contender corner="red" {...this.props.pokemon} />
           </section>
         </div>
       </main>

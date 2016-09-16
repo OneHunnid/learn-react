@@ -10,7 +10,11 @@ export const fetchPokemon = () => {
   }).then((pokemon) => {
     return {
       type: 'FETCH_POKEMON',
-      pokemon: pokemon
+      pokemon: {
+        id: pokemon.id,
+        name: pokemon.name,
+        url: `https://img.pokemondb.net/artwork/${pokemon.name}.jpg`
+      }
     }
   }).catch((err) => {
     if (/404/.test(err.statusCode)) {

@@ -1,0 +1,20 @@
+
+// 
+// Contender
+// 
+
+.contender {
+  background: #f2f2f2;
+  padding: 30px;
+}
+.contender__name {
+  &--blue {
+    color: blue;
+  }
+  &--red {
+    color: red;
+  }
+}
+.contender__image {
+  max-width: 80%;
+}
