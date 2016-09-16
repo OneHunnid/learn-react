@@ -81,11 +81,22 @@ export default class CatVsPokemon extends React.Component {
    * @todo
    */
   render() {
+    const accepted = ['cat', 'pokemon'].map((v) => {
+      if (!this.props[v]) {
+        return 
+      }
+
+      return (
+        <p key={v}>A {v} stepped up.</p>
+      )
+    }).filter((v) => v && v !== '')
+
     if (!this.__hasContenders()) {
       return (
         <main className="cat-vs-pokemon">
           <section className="cat-vs-pokemon__no-contenders">
             <p>Waiting for contenders.</p>
+            {accepted}
           </section>
         </main>
       )
