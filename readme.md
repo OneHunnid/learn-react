@@ -226,51 +226,53 @@ export default Foo
 To make our apps easy to understand and help keep them organized, this structure should be used:
 
 ```
-├── /node_modules/                # 3rd-party libraries and utilities
-├── /src/                         # The source code of the application
-│   ├── /client/                  # Client side files
-│   │   ├── /assets/              # All assets files
-│   │   ├── /scripts/             # Contains javascript files for app
-│   │   │   ├── /actions/         # Payloads of data that send data to the store
-│   │   │   ├── /components/      # Components meant for Pieces of Functionality
-│   │   │   ├── /containers/      # Components meant for Layouts/Templates
-│   │   │   ├── /reducers/        # Pure function that returns the next state based off of actions
-│   │   │   ├── /routes/          # Components meant for Pages
-│   │   │   ├── /store/           # Manages the application state
-│   │   │   ├── /utilities/       # Utilities such as libraries or common tools
-│   │   │   └── index.js          # App entry point. Connects store to App and contains routes
-│   │   └── /styles/              # Contains the LESS and CSS for the app
-│   │       ├── base.scss         # Basic styling for application
-│   │       ├── index.scss        # Entry point for styling
-│   │       └── reset.css         # Standard normalize/reset stylesheet
-│   └── /server/                  # Server side files
-│       ├── /middleware/          # Additional server functionality
-│       ├── /models/              # Application Models (i.e. business logic)
-│       ├── /routes/              # Controller map to routes (i.e. urls)
-│       ├── /scripts/             # Various entry points
-│       ├── /views/               # Template files
-│       ├── app.js                # Express application server
-│       └── index.js              # Exports happen here
-├── /test/                        # The source code of the application
-│   ├── /client/                  # Client side test files
-│   │   ├── /function/            # Test functionality across components
-│   │   ├── /unit/                # Test small, critical pieces of functionality
-│   │   ├── /utils/               # Utilities used to prepare test cases
-│   │   ├── env.js                # Setup the test application environment
-│   │   └── setup.js              # Global test setup goes here
-│   └── /server/                  # Server side test files
-│       ├── /function/            # Test functionality across components
-│       ├── /unit/                # Test small, critical pieces of functionality
-│       ├── /utils/               # Utilities used to prepare test cases
-│       ├── env.js                # Setup the test application environment
-│       └── setup.js              # Global test setup goes here
-├── .gitignore                    # Ignore certain files and folders
-├── .npmrc                        # Default NPM config
-├── index.html                    # Application's HTML Entry Point
-├── package.json                  # NPM Packages
-├── readme.md                     # Important Information
-├── server.js                     # Development server configuration
-└── webpack.config.js             # Webpack configuration
+├── /node_modules/                    # 3rd-party libraries and utilities
+├── /src/                             # The source code of the application
+│   ├── /client/                      # Client side files
+│   │   ├── /assets/                  # All assets files
+│   │   ├── /scripts/                 # Contains javascript files for app
+│   │   │   ├── /actions/             # Payloads of data that send data to the store
+│   │   │   ├── /components/          # Components meant for Pieces of Functionality
+│   │   │   ├── /containers/          # Components meant for Layouts/Templates
+│   │   │   ├── /reducers/            # Pure function that returns the next state based off of actions
+│   │   │   ├── /routes/              # Components meant for Pages
+│   │   │   ├── /store/               # Manages the application state
+│   │   │   ├── /utilities/           # Utilities such as libraries or common tools
+│   │   │   └── index.js              # App entry point. Connects store to App and contains routes
+│   │   └── /styles/                  # Contains the LESS and CSS for the app
+│   │       ├── _global_styles.scss   # Global styling for application
+│   │       ├── _local_variables.scss # Local variables for styling
+│   │       ├── _typography.scss      # Typography styling
+│   │       ├── index.scss            # Entry point for styling
+│   │       └── reset.css             # Standard normalize/reset stylesheet
+│   └── /server/                      # Server side files
+│       ├── /middleware/              # Additional server functionality
+│       ├── /models/                  # Application Models (i.e. business logic)
+│       ├── /routes/                  # Controller map to routes (i.e. urls)
+│       ├── /scripts/                 # Various entry points
+│       ├── /views/                   # Template files
+│       ├── app.js                    # Express application server
+│       └── index.js                  # Exports happen here
+├── /test/                            # The source code of the application
+│   ├── /client/                      # Client side test files
+│   │   ├── /function/                # Test functionality across components
+│   │   ├── /unit/                    # Test small, critical pieces of functionality
+│   │   ├── /utils/                   # Utilities used to prepare test cases
+│   │   ├── env.js                    # Setup the test application environment
+│   │   └── setup.js                  # Global test setup goes here
+│   └── /server/                      # Server side test files
+│       ├── /function/                # Test functionality across components
+│       ├── /unit/                    # Test small, critical pieces of functionality
+│       ├── /utils/                   # Utilities used to prepare test cases
+│       ├── env.js                    # Setup the test application environment
+│       └── setup.js                  # Global test setup goes here
+├── .gitignore                        # Ignore certain files and folders
+├── .npmrc                            # Default NPM config
+├── index.html                        # Application's HTML Entry Point
+├── package.json                      # NPM Packages
+├── readme.md                         # Important Information
+├── server.js                         # Development server configuration
+└── webpack.config.js                 # Webpack configuration
 ```
 
 ## Primary Dependencies
