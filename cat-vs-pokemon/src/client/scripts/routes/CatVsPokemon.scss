@@ -1,0 +1,32 @@
+
+// 
+// Cat vs. Pokemon
+// 
+
+.cat-vs-pokemon {
+  margin-bottom: 60px;
+  overflow: hidden;
+  padding: 0 40px;
+  text-align: center;
+}
+  .cat-vs-pokemon__refresh-button {
+    margin: 20px 0 40px;
+  }
+  .cat-vs-pokemon__contenders {
+    // 
+  }
+    .cat-vs-pokemon__contenders__cat {
+      float: left;
+      width: 40%;
+    }
+    .cat-vs-pokemon__contenders__vs {
+      float: left;
+      font-size: 30px;
+      font-style: italic;
+      margin-top: 150px;
+      width: 20%;
+    }
+    .cat-vs-pokemon__contenders__pokemon {
+      float: left;
+      width: 40%;
+    }
