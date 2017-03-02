@@ -8,7 +8,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <h1><Link to="/">Durian</Link></h1>
+        <h1><Link to="/">Base Template</Link></h1>
       </header>
     )
   }
