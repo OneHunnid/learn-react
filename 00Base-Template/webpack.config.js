@@ -9,7 +9,7 @@ module.exports = {
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/dev-server',
     './src/client/scripts/index',
-    './src/client/styles/base.scss'
+    './src/client/styles/index.scss'
   ],
   output: {
     path: path.join(__dirname, 'dist'),

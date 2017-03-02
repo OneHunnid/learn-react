@@ -1,6 +1,4 @@
 @import 'reset.css';
-@import 'local_variables.scss';
-@import 'typography.scss';
-@import 'global_styling.scss';
-
-@import '../scripts/**/*';
+@import '_local_variables.scss';
+@import '_typography.scss';
+@import '_global_styling.scss';
