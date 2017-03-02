@@ -2,14 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchMessage } from './../actions/fetchMessage'
 
-@connect((store) => {
-  return {
-    message: store.retrieveMessage.message,
-    dispatch: store
-  }
-})
-
-export default class Home extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -29,3 +22,13 @@ export default class Home extends React.Component {
     }
   }
 }
+
+
+const mapStateToProps = (store) => {
+  return {
+    message: store.retrieveMessage.message,
+    dispatch: store
+  }
+}
+
+export default connect(mapStateToProps)(Home)

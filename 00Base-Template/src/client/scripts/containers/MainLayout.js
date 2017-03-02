@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+import Header from '../components/Header'
+
 export default class MainLayout extends React.Component {
   constructor(props) {
     super(props)
   }
   render() {
     return (
-      <div className='container'>
-        <header>
-          <h1><Link to="/">Durian</Link></h1>
-        </header>
+      <div>
+        <Header />
         <main>
           {this.props.children}
         </main>

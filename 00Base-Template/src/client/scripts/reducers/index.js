@@ -1,7 +1,14 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux'
 
-const retrieveMessage = (state={}, action) => {
+const initialState = {
+  fetching: false,
+  fetched: false,
+  payload: [],
+  error: null,
+}
+
+const retrieveMessage = (state=initialState, action) => {
   switch (action.type) {
     case 'FETCH_MESSAGE':
       return {

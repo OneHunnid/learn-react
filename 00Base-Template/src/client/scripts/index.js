@@ -1,24 +1,30 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory, hashHistory, useRouterHistory } from 'react-router'
 import { Provider } from 'react-redux'
 import { syncHistoryWithStore } from 'react-router-redux'
 
+// Containers
 import MainLayout from './containers/MainLayout'
-import Home from './components/Home'
-import NotFound from './components/NotFound'
 
+// Routes
+import Home from './routes/Home'
+import NotFound from './routes/NotFound'
+
+// Store
 import store from './store/store'
 
-const history = syncHistoryWithStore(hashHistory, store)
+// History
+const history = syncHistoryWithStore(hashHistory, store);
 
+// App Entry Point
 const app = document.querySelector('.root');
 
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route component={MainLayout}>
-        <Route path="/" component={Home} />
+        <Route path="/" component={Home} name="home"/>
         <Route path="*" component={NotFound} />
       </Route>
     </Router>
