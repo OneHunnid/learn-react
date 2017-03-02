@@ -4,6 +4,7 @@
   "description": "React, Redux, Sass and Webpack Starter Kit",
   "main": "webpack.config.js",
   "scripts": {
+    "build": "webpack -p --progress",
     "client:serv": "webpack-dashboard -- webpack-dev-server",
     "serve:dev": "node node_modules/.bin/nodemon --exec 'node -r dotenv/config -r babel-core/register' src/server/scripts/server --watch src/server",
     "test:lint": "eslint **/*.js"
@@ -64,10 +65,12 @@
     "eslint": "^3.4.0",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "http-proxy-middleware": "0.17.3",
     "node-sass": "^3.8.0",
     "nodemon": "1.11.0",
     "passport": "^0.3.2",
     "passport-google": "^0.3.0",
+    "path": "0.12.7",
     "postcss-loader": "^0.9.1",
     "react": "^15.2.1",
     "react-css-modules": "^3.7.8",

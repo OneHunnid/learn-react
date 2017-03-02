@@ -15,7 +15,7 @@ import NotFound from './routes/NotFound'
 import store from './store/store'
 
 // History
-const history = syncHistoryWithStore(hashHistory, store);
+const history = syncHistoryWithStore(browserHistory, store);
 
 // App Entry Point
 const app = document.querySelector('.root');
