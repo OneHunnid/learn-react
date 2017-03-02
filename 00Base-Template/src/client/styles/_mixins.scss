@@ -1,0 +1,22 @@
+// Media Queries
+$tablet-width            :   600px;
+$desktop-width           :   1024px;
+$desktop-width--large    :   1600px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-width--large {
+  @media (min-width: #{$desktop-width--large}) {
+    @content;
+  }
+}
