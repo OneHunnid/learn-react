@@ -7,6 +7,7 @@
     "build": "webpack -p --progress",
     "client:serv": "webpack-dashboard -- webpack-dev-server",
     "serve:dev": "node node_modules/.bin/nodemon --exec 'node -r dotenv/config -r babel-core/register' src/server/scripts/server --watch src/server",
+    "start": "node -r babel-core/register src/server/scripts/server",
     "test:lint": "eslint **/*.js"
   },
   "author": "Chris Limbrick",
