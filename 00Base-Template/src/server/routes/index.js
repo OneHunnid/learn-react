@@ -7,7 +7,7 @@ const router = Router();
 const clientDir = resolve(`${__dirname}/../../client`);
 
 if (isDev()) {
-  router.use(`${clientDir}/static`, proxy({
+  router.use('/static', proxy({
     changeOrigin: true,
     target: 'http://localhost:8080'
   }))
