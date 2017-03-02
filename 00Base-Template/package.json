@@ -71,6 +71,7 @@
     "http-proxy-middleware": "0.17.3",
     "node-sass": "^3.8.0",
     "nodemon": "1.11.0",
+    "normalize-scss": "6.0.0",
     "passport": "^0.3.2",
     "passport-google": "^0.3.0",
     "path": "0.12.7",
@@ -94,6 +95,7 @@
     "yargs": "6.6.0"
   },
   "dependencies": {
-    "bootstrap-sass": "3.3.7"
+    "bootstrap-sass": "3.3.7",
+    "normalize-scss": "6.0.0"
   }
 }
