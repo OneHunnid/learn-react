@@ -42,10 +42,13 @@
     }
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
+    "axios": "0.15.3",
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -57,10 +60,12 @@
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
     "dotenv": "2.0.0",
+    "es6-promise": "4.0.5",
     "eslint": "^3.4.0",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.8.0",
+    "nodemon": "1.11.0",
     "passport": "^0.3.2",
     "passport-google": "^0.3.0",
     "postcss-loader": "^0.9.1",
@@ -78,6 +83,8 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dashboard": "^0.1.8",
-    "webpack-dev-server": "^1.14.1"
-  }
+    "webpack-dev-server": "^1.14.1",
+    "yargs": "6.6.0"
+  },
+  "dependencies": {}
 }
