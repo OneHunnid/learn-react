@@ -13,7 +13,7 @@ const retrieveMessage = (state=initialState, action) => {
     case 'FETCH_MESSAGE':
       return {
         ...state,
-        message: "A React, Redux, SASS and Webpack Starter Kit"
+        message: "A React, Redux, SASS, Bootstrap and Webpack Starter Kit"
       }
     default:
       return state
