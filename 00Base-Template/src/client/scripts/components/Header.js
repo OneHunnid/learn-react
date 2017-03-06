@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router'
 import { Nav, NavItem, Input, Navbar, Button } from 'react-bootstrap'
 
 class Header extends React.Component {
@@ -21,7 +20,7 @@ class Header extends React.Component {
              <NavItem eventKey={2} href="#">Link 2</NavItem>
            </Nav>
            <Navbar.Form pullRight>
-             <Button type="submit">Submit</Button>
+             <Button type="submit">Contact Us</Button>
            </Navbar.Form>
          </Navbar.Collapse>
         </Navbar>
