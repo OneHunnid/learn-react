@@ -32,15 +32,15 @@ class Home extends React.Component {
           <Grid>
             <Row>
               <Col md={4}>
-                <h3>Heading 1</h3>
+                <h3>Heading 3</h3>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla tortor. Duis id rutrum dolor. Fusce eu quam viverra, tristique justo quis, rhoncus augue. In id risus euismod, finibus dui eget.</div>
               </Col>
               <Col md={4}>
-                <h3>Heading 1</h3>
+                <h3>Heading 3</h3>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla tortor. Duis id rutrum dolor. Fusce eu quam viverra, tristique justo quis, rhoncus augue. In id risus euismod, finibus dui eget.</div>
               </Col>
               <Col md={4}>
-                <h3>Heading 1</h3>
+                <h3>Heading 3</h3>
                   <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla tortor. Duis id rutrum dolor. Fusce eu quam viverra, tristique justo quis, rhoncus augue. In id risus euismod, finibus dui eget.</div>
               </Col>
             </Row>
