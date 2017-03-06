@@ -1,0 +1,18 @@
+/* GENERAL */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* HELPERS */
+
+.showtime {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* HEADER */
+
+.navbar--no-margin-bottom {
+  margin-bottom: 0
+}
