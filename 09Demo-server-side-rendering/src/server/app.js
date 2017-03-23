@@ -2,7 +2,7 @@ import path from 'path'
 import express from 'express'
 import routes from './routes'
 import React from 'react'
-import { createStore } from 'redux'
+import { renderToString } from 'react-dom/server'
 import { Provider } from 'react-redux'
 
 import store from '../client/scripts/store/store'
@@ -16,15 +16,13 @@ app.use(routes)
 app.use(handleRender)
 
 function handleRender(req, res) {
-  const storeNew = createStore(store)
-
   const html = renderToString(
-    <Provider store={storeNew}>
+    <Provider store={store}>
       <MainLayout />
     </Provider>
   )
 
-  const preloadedState = storeNew.getState()
+  const preloadedState = store.getState()
 
   res.send(renderFullPage(html, preloadedState))
 }

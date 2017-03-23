@@ -12,20 +12,20 @@ import MainLayout from './containers/MainLayout'
 import Home from './routes/Home'
 import NotFound from './routes/NotFound'
 
-// Store
-import store from './store/store'
+// Reducers
+import reducers from './reducers'
 
 const preloadedState = window.__PRELOADED_STATE__
 
 delete window.__PRELOADED_STATE__
 
-const storeNew = createStore(store, preloadedState)
+const storeNew = createStore(reducers, preloadedState)
 
 // History
 const history = syncHistoryWithStore(browserHistory, storeNew);
 
 // App Entry Point
-const app = document.querySelector('.root');
+const app = document.querySelector('#root');
 
 ReactDOM.render(
   <Provider store={storeNew}>

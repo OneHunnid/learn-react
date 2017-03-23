@@ -3,11 +3,7 @@ import combinedReducers from './../reducers/index'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
-const middleware = applyMiddleware(logger(), thunk);
-
-const store = createStore(
+export default createStore(
   combinedReducers,
-  middleware
+  applyMiddleware(logger(), thunk)
 );
-
-export default store;

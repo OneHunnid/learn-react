@@ -20,9 +20,7 @@ const retrieveMessage = (state=initialState, action) => {
   }
 }
 
-const combinedReducers = combineReducers({
-    retrieveMessage,
-    routing: routerReducer
-  })
-
-export default combinedReducers;
+export default combineReducers({
+  retrieveMessage,
+  routing: routerReducer
+})
