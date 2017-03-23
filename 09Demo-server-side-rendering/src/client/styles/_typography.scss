@@ -1,0 +1,131 @@
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background-color: $white;
+}
+
+body {
+  font-family: $font-family--primary;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  color: $black;
+  font-family: $font-family--primary;
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 4.8rem;
+  margin: 0;
+  margin-bottom: 2.4rem;
+
+  @include tablet {
+    // Make font bigger
+  }
+
+  @include desktop {
+    // Make font bigger
+  }
+}
+
+h2 {
+  color: $black;
+  font-family: $font-family--primary;
+  font-size: 3.0rem;
+  font-weight: 500;
+  line-height: 3.6rem;
+  margin: 0;
+  margin-bottom: 2.4rem;
+
+  @include tablet {
+    // Make font bigger
+  }
+
+  @include desktop {
+    // Make font bigger
+  }
+}
+
+h3 {
+  color: $black;
+  font-family: $font-family--primary;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 3.6rem;
+  margin: 0;
+  margin-bottom: 2.4rem;
+
+  @include tablet {
+    // Make font bigger
+  }
+
+  @include desktop {
+    // Make font bigger
+  }
+}
+
+h4 {
+  color: $black;
+  font-family: $font-family--primary;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  margin: 0;
+  margin-bottom: 2.4rem;
+
+  @include tablet {
+    // Make font bigger
+  }
+
+  @include desktop {
+    // Make font bigger
+  }
+}
+
+h5 {
+  color: $black;
+  font-family: $font-family--primary;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  margin: 0;
+  margin-bottom: 2.4rem;
+
+  @include tablet {
+    // Make font bigger
+  }
+
+  @include desktop {
+    // Make font bigger
+  }
+}
+
+h6 {
+  color: $black;
+  font-family: $font-family--primary;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 3.6rem;
+  margin: 0;
+  margin-bottom: 2.4rem;
+
+  @include tablet {
+    // Make font bigger
+  }
+
+  @include desktop {
+    // Make font bigger
+  }
+}
+
+p {
+  margin: 0;
+  margin-bottom: 2.4rem;
+  color: $black;
+}

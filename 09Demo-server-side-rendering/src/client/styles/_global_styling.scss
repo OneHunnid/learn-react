@@ -1,0 +1,29 @@
+/* GENERAL */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Adding margin-bottom to columns which stack on mobile.
+@media (max-width: 768px) {
+  [class*="col-"]{
+      margin-bottom: 15px;
+  }
+}
+
+/* HELPERS */
+
+.showtime {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.make-inline-block {
+  display: inline-block;
+}
+
+/* HEADER */
+
+.navbar--no-margin-bottom {
+  margin-bottom: 0
+}
