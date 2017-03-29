@@ -10,7 +10,6 @@ const config = {};
 // This configured production
 if (argv.p) {
     config.entry = [
-      'react-hot-loader/patch',
       './src/client/scripts/index',
       './src/client/scripts/utils/index',
       './src/client/styles/index.scss'
@@ -27,7 +26,7 @@ else {
   config.entry = [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/dev-server',
+    'webpack-hot-middleware/client',
     './src/client/scripts/index',
     './src/client/scripts/utils/index',
     './src/client/styles/index.scss'
@@ -35,6 +34,7 @@ else {
   config.plugins = [
     new DashboardPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new ExtractTextPlugin({
       filename: 'bundle.css',
       allChunks: true
@@ -48,6 +48,11 @@ module.exports = {
     path: path.join(__dirname, 'src', 'client', 'static'),
     filename: 'bundle.js',
     publicPath: '/static/'
+  },
+  devServer: {
+    hot: true,
+    contentBase: path.resolve(__dirname, 'src', 'client', 'static'),
+    publicPath: (__dirname, 'src', 'client', 'static')
   },
   plugins: config.plugins,
   module: {
