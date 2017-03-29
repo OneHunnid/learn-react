@@ -25,7 +25,6 @@ if (argv.p) {
 else {
   config.entry = [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
     'webpack-hot-middleware/client',
     './src/client/scripts/index',
     './src/client/scripts/utils/index',
