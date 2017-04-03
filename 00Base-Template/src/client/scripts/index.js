@@ -1,33 +1,25 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import { Router, Route, IndexRoute, browserHistory, hashHistory, useRouterHistory } from 'react-router'
 import { Provider } from 'react-redux'
-import { syncHistoryWithStore } from 'react-router-redux'
+import { ConnectedRouter } from 'react-router-redux'
+
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory()
 
 // Containers
-import MainLayout from './containers/MainLayout'
-
-// Routes
-import Home from './routes/Home'
-import NotFound from './routes/NotFound'
+import App from './App'
 
 // Store
 import store from './store/store'
 
-// History
-const history = syncHistoryWithStore(browserHistory, store);
-
 // App Entry Point
-const app = document.querySelector('.root');
+const root = document.querySelector('.root');
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history}>
-      <Route component={MainLayout}>
-        <Route path="/" component={Home} name="home"/>
-        <Route path="*" component={NotFound} />
-      </Route>
-    </Router>
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
   </Provider>,
-  app
+  root
 );
