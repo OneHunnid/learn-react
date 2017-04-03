@@ -100,6 +100,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "3.3.7",
-    "normalize-scss": "6.0.0"
+    "normalize-scss": "6.0.0",
+    "react-router-dom": "4.0.0"
   }
 }
