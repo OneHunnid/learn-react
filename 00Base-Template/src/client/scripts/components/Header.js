@@ -1,6 +1,12 @@
 import React from 'react'
 import { Nav, NavItem, Input, Navbar, Button } from 'react-bootstrap'
 
+// @TODO
+// Add <Link to="/">Logo Goes Here</Link> for <Navbar.Brand>
+// react-router-bootstrap doesn't support react-router v4 yet
+// So we can't use import { LinkContainer } from 'react-router-bootstrap'
+// StackOverflow: http://tiny.cc/ad39jy
+
 class Header extends React.Component {
   constructor(props) {
     super(props)
@@ -10,14 +16,14 @@ class Header extends React.Component {
         <Navbar className="navbar--no-margin-bottom">
          <Navbar.Header>
            <Navbar.Brand>
-             <a href="#">Base Template</a>
+             <a href="/">Base Template</a>
            </Navbar.Brand>
            <Navbar.Toggle />
          </Navbar.Header>
          <Navbar.Collapse>
            <Nav>
-             <NavItem eventKey={1} href="#">Link 1</NavItem>
-             <NavItem eventKey={2} href="#">Link 2</NavItem>
+             <NavItem eventKey={1} href="/notfound">404 Page</NavItem>
+             <NavItem eventKey={2} href="/typography">Typography</NavItem>
            </Nav>
            <Navbar.Form pullRight>
              <Button type="submit">Contact Us</Button>
