@@ -68,6 +68,7 @@
     "express": "4.14.0",
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "0.10.1",
+    "history": "4.6.1",
     "http-proxy-middleware": "0.17.3",
     "node-sass": "4.5.1",
     "nodemon": "1.11.0",
@@ -82,8 +83,9 @@
     "react-dom": "15.2.1",
     "react-hot-loader": "3.0.0-beta.6",
     "react-redux": "4.4.5",
-    "react-router": "2.6.0",
-    "react-router-redux": "4.0.5",
+    "react-router": "4.0.0",
+    "react-router-bootstrap": "0.23.1",
+    "react-router-redux": "5.0.0-alpha.4",
     "redux": "3.5.2",
     "redux-logger": "2.6.1",
     "redux-promise": "0.5.3",
@@ -100,6 +102,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "3.3.7",
-    "normalize-scss": "6.0.0"
+    "normalize-scss": "6.0.0",
+    "react-router-dom": "4.0.0"
   }
 }
