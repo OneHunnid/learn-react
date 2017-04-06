@@ -7,7 +7,7 @@ class Typography extends React.Component {
   render() {
     return (
       <div className="page-typography">
-        <div class="jumbotron">
+        <div className="jumbotron">
           <div className="container text-center">
             <h1>Typography</h1>
           </div>
