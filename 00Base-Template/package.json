@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack -p --progress",
     "test:lint": "eslint **/*.js",
-    "start": "node -r babel-core/register -r dotenv/config src/server/scripts/server"
+    "start": "node -r babel-core/register -r dotenv/config src/server/scripts/server",
+    "watch": "nodemon --watch src/server --watch .env --watch webpack.config.js --exec 'npm start'"
   },
   "author": "Chris Limbrick",
   "license": "ISC",

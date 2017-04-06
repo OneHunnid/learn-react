@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Nav, NavItem, Input, Navbar, Button } from 'react-bootstrap'
 
 // @TODO
@@ -22,8 +23,9 @@ class Header extends React.Component {
          </Navbar.Header>
          <Navbar.Collapse>
            <Nav>
-             <NavItem eventKey={1} href="/notfound">404 Page</NavItem>
-             <NavItem eventKey={2} href="/typography">Typography</NavItem>
+              <Link to="/typography">Typography</Link>
+              <NavItem eventKey={1} href="/notfound">404 Page</NavItem>
+              <NavItem eventKey={2} href="/typography">Typography</NavItem>
            </Nav>
            <Navbar.Form pullRight>
              <Button type="submit">Contact Us</Button>

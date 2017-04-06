@@ -34,6 +34,7 @@ else {
     new DashboardPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NamedModulesPlugin(),
     new ExtractTextPlugin({
       filename: 'bundle.css',
       allChunks: true
@@ -48,6 +49,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  devtool: 'inline-source-map',
   devServer: {
     hot: true,
     contentBase: path.resolve(__dirname, 'src', 'client', 'static'),
@@ -64,8 +66,8 @@ module.exports = {
           {
             loader: 'babel-loader',
             query: {
-              presets: ['react', 'es2015', 'stage-0'],
-              plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
+              presets: ['react', ['es2015', { 'modules': false }], 'stage-0'],
+              plugins: ['react-hot-loader/babel', 'react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
             }
           }
         ]

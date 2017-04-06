@@ -1,28 +1,19 @@
-import ReactDOM from 'react-dom'
 import React from 'react'
-import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'react-router-redux'
-import { BrowserRouter } from 'react-router'
+import ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import Root from './Root';
 
-import createHistory from 'history/createBrowserHistory'
-const history = createHistory()
+const render = Component => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.querySelector('.root')
+  );
+}
 
-// Containers
-import App from './App'
+render(Root);
 
-// Store
-import store from './store/store'
-
-// App Entry Point
-const root = document.querySelector('.root');
-
-ReactDOM.render(
-  <BrowserRouter>
-    <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <App />
-      </ConnectedRouter>
-    </Provider>
-  </BrowserRouter>,
-  root
-);
+if (module.hot) {
+  module.hot.accept('./Root', () => { render(Root) });
+}
