@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchMessage } from './../actions/fetchMessage'
-import { Grid, Row, Col, Button, Jumbotron, ButtonToolbar } from 'react-bootstrap'
 
 class Home extends React.Component {
   constructor(props) {
@@ -19,32 +18,32 @@ class Home extends React.Component {
     else {
       return (
         <div className="home">
-          <Jumbotron>
+          <div className="jumbotron">
             <div className="container text-center">
-              <h1>Base template</h1>
+              <h1>Base Template</h1>
               <p>{this.props.message}</p>
-              <ButtonToolbar className="make-inline-block">
-                <Button bsStyle="primary">Get Started</Button>
-                <Button bsStyle="success">Learn More</Button>
-              </ButtonToolbar>
+                <div>
+                  <button type="button" className="btn btn-primary">Get Started</button>
+                  <button type="button" className="btn btn-success">Learn More</button>
+                </div>
             </div>
-          </Jumbotron>
-          <Grid>
-            <Row>
-              <Col md={4}>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4">
                 <h3>Heading 3</h3>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla tortor. Duis id rutrum dolor. Fusce eu quam viverra, tristique justo quis, rhoncus augue. In id risus euismod, finibus dui eget.</div>
-              </Col>
-              <Col md={4}>
+              </div>
+              <div className="col-md-4">
                 <h3>Heading 3</h3>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla tortor. Duis id rutrum dolor. Fusce eu quam viverra, tristique justo quis, rhoncus augue. In id risus euismod, finibus dui eget.</div>
-              </Col>
-              <Col md={4}>
+              </div>
+              <div className="col-md-4">
                 <h3>Heading 3</h3>
-                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla tortor. Duis id rutrum dolor. Fusce eu quam viverra, tristique justo quis, rhoncus augue. In id risus euismod, finibus dui eget.</div>
-              </Col>
-            </Row>
-          </Grid>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet nulla tortor. Duis id rutrum dolor. Fusce eu quam viverra, tristique justo quis, rhoncus augue. In id risus euismod, finibus dui eget.</div>
+              </div>
+            </div>
+          </div>
         </div>
       )
     }
