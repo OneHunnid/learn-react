@@ -1,25 +1,29 @@
-import ReactDOM from 'react-dom'
 import React from 'react'
-import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'react-router-redux'
-
-import createHistory from 'history/createBrowserHistory'
-const history = createHistory()
-
-// Containers
+import ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App'
+import '../styles/index.scss'
 
-// Store
-import store from './store/store'
-
-// App Entry Point
 const root = document.querySelector('.root');
 
-ReactDOM.render(
-  <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <App />
-    </ConnectedRouter>
-  </Provider>,
-  root
-);
+// Wraps our App in AppContainer
+const render = (Component) => {
+  ReactDOM.render(
+    <BrowserRouter>
+      <AppContainer>
+        <Component/>
+      </AppContainer>
+    </BrowserRouter>,
+    root
+  );
+};
+
+// Renders our application
+render(App);
+
+// Checks if there have been changes and accepts them.
+// This activates HMR and refreshes modules in the browser
+if (module.hot) {
+  module.hot.accept();
+}

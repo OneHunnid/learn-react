@@ -1,11 +1,5 @@
 import React from 'react'
-import { Nav, NavItem, Input, Navbar, Button } from 'react-bootstrap'
-
-// @TODO
-// Add <Link to="/">Logo Goes Here</Link> for <Navbar.Brand>
-// react-router-bootstrap doesn't support react-router v4 yet
-// So we can't use import { LinkContainer } from 'react-router-bootstrap'
-// StackOverflow: http://tiny.cc/ad39jy
+import { Link } from 'react-router-dom'
 
 class Header extends React.Component {
   constructor(props) {
@@ -13,23 +7,21 @@ class Header extends React.Component {
   }
   render() {
     return (
-        <Navbar className="navbar--no-margin-bottom">
-         <Navbar.Header>
-           <Navbar.Brand>
-             <a href="/">Base Template</a>
-           </Navbar.Brand>
-           <Navbar.Toggle />
-         </Navbar.Header>
-         <Navbar.Collapse>
-           <Nav>
-             <NavItem eventKey={1} href="/notfound">404 Page</NavItem>
-             <NavItem eventKey={2} href="/typography">Typography</NavItem>
-           </Nav>
-           <Navbar.Form pullRight>
-             <Button type="submit">Contact Us</Button>
-           </Navbar.Form>
-         </Navbar.Collapse>
-        </Navbar>
+      <nav className="navbar navbar-default navbar--no-margin-bottom">
+        <div className="container">
+          <div className="navbar-header">
+            <Link className="navbar-brand" to="/">Base Template</Link>
+          </div>
+          <ul className="nav navbar-nav navbar-right">
+            <li>
+              <Link to="typography">Typography</Link>
+            </li>
+            <li>
+              <Link to="notfound">404 Page</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     )
   }
 }

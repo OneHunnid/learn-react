@@ -1,3 +1,3 @@
 import app from '../app'
 
-app.listen(app.get('port'))
+const server = app.listen(app.get('port'))

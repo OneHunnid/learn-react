@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack -p --progress",
     "test:lint": "eslint **/*.js",
-    "start": "node -r babel-core/register -r dotenv/config src/server/scripts/server"
+    "start": "node -r babel-core/register -r dotenv/config src/server/scripts/server",
+    "watch": "nodemon --watch src/server --watch .env --watch webpack.config.js --exec 'npm start'"
   },
   "author": "Chris Limbrick",
   "license": "ISC",
@@ -43,7 +44,9 @@
   },
   "babel": {
     "presets": [
-      "node6"
+      "es2015",
+      "react",
+      "stage-0"
     ]
   },
   "devDependencies": {
@@ -78,13 +81,11 @@
     "path": "0.12.7",
     "postcss-loader": "0.9.1",
     "react": "15.2.1",
-    "react-bootstrap": "0.30.7",
     "react-css-modules": "3.7.8",
     "react-dom": "15.2.1",
     "react-hot-loader": "3.0.0-beta.6",
     "react-redux": "4.4.5",
     "react-router": "4.0.0",
-    "react-router-bootstrap": "0.23.1",
     "react-router-redux": "5.0.0-alpha.4",
     "redux": "3.5.2",
     "redux-logger": "2.6.1",

@@ -11,8 +11,7 @@ const config = {};
 if (argv.p) {
     config.entry = [
       './src/client/scripts/index',
-      './src/client/scripts/utils/index',
-      './src/client/styles/index.scss'
+      './src/client/scripts/utils/index'
     ]
     config.plugins = [
       new DashboardPlugin(),
@@ -27,16 +26,17 @@ else {
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
     './src/client/scripts/index',
-    './src/client/scripts/utils/index',
-    './src/client/styles/index.scss'
+    './src/client/scripts/utils/index'
   ]
   config.plugins = [
     new DashboardPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NamedModulesPlugin(),
     new ExtractTextPlugin({
       filename: 'bundle.css',
-      allChunks: true
+      allChunks: true,
+      disable: false
     })
   ]
 }
@@ -48,6 +48,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  devtool: 'inline-source-map',
   devServer: {
     hot: true,
     contentBase: path.resolve(__dirname, 'src', 'client', 'static'),
@@ -64,8 +65,8 @@ module.exports = {
           {
             loader: 'babel-loader',
             query: {
-              presets: ['react', 'es2015', 'stage-0'],
-              plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
+              presets: ['react', ['es2015', { 'modules': false }], 'stage-0'],
+              plugins: ['react-hot-loader/babel', 'react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
             }
           }
         ]
@@ -80,10 +81,12 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        })
+        use: (argv.p
+          ? ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: ['css-loader', 'sass-loader']
+          })
+          : ['css-loader', 'sass-loader'])
       }
     ]
   }
