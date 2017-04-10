@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 // Routes
 import Home from './routes/Home'
@@ -15,18 +15,16 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <Router>
-        <div>
-          <Header />
-          <main>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/typography" component={Typography} />
-              <Route component={NotFound}/>
-            </Switch>
-          </main>
-        </div>
-      </Router>
+      <div>
+        <Header />
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/typography" component={Typography} />
+            <Route component={NotFound}/>
+          </Switch>
+        </main>
+      </div>
     )
   }
 }

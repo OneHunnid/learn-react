@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 
 const root = document.querySelector('.root');
@@ -8,9 +9,11 @@ const root = document.querySelector('.root');
 // Wraps our App in AppContainer
 const render = (Component) => {
   ReactDOM.render(
-    <AppContainer>
-      <Component/>
-    </AppContainer>,
+    <BrowserRouter>
+      <AppContainer>
+        <Component/>
+      </AppContainer>
+    </BrowserRouter>,
     root
   );
 };
