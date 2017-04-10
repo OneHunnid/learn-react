@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
+import '../styles/index.scss'
 
 const root = document.querySelector('.root');
 

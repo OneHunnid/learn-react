@@ -11,8 +11,7 @@ const config = {};
 if (argv.p) {
     config.entry = [
       './src/client/scripts/index',
-      './src/client/scripts/utils/index',
-      './src/client/styles/index.scss'
+      './src/client/scripts/utils/index'
     ]
     config.plugins = [
       new DashboardPlugin(),
@@ -27,8 +26,7 @@ else {
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
     './src/client/scripts/index',
-    './src/client/scripts/utils/index',
-    './src/client/styles/index.scss'
+    './src/client/scripts/utils/index'
   ]
   config.plugins = [
     new DashboardPlugin(),
@@ -38,7 +36,7 @@ else {
     new ExtractTextPlugin({
       filename: 'bundle.css',
       allChunks: true,
-      disable: true
+      disable: false
     })
   ]
 }
@@ -83,10 +81,12 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        })
+        use: (argv.p
+          ? ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: ['css-loader', 'sass-loader']
+          })
+          : ['css-loader', 'sass-loader'])
       }
     ]
   }
