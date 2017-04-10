@@ -13,11 +13,13 @@ if (isDev()) {
 
   const compiler = webpack(webpackConfig)
 
+  // This compiles our app using webpack
   router.use(webpackDevMiddleware(compiler, {
     publicPath: webpackConfig.output.publicPath,
     noInfo: true
   }))
 
+  // This connects our app to HMR using the middleware
   router.use(webpackHotMiddleware(compiler))
 }
 

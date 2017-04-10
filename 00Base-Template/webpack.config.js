@@ -37,7 +37,8 @@ else {
     new webpack.NamedModulesPlugin(),
     new ExtractTextPlugin({
       filename: 'bundle.css',
-      allChunks: true
+      allChunks: true,
+      disable: true
     })
   ]
 }
